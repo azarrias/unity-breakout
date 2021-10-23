@@ -5,6 +5,7 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     private float screenWidthInUnits;
+    private const float paddleHalfWidth = 1f;
 
     void Start()
     {
@@ -14,7 +15,8 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         float mousePosInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
-        var paddlePos = new Vector2(mousePosInUnits, transform.position.y);
+        var paddlePos = new Vector2(transform.position.x, transform.position.y);
+        paddlePos.x = Mathf.Clamp(mousePosInUnits, paddleHalfWidth, screenWidthInUnits - paddleHalfWidth);
         transform.position = paddlePos;
     }
 }
