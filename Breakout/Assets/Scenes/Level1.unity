@@ -2148,6 +2148,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2612484424903436121, guid: d8fe1549909e895408790384310b8bd6,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612484424903436121, guid: d8fe1549909e895408790384310b8bd6,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612484424903436121, guid: d8fe1549909e895408790384310b8bd6,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612484424903436121, guid: d8fe1549909e895408790384310b8bd6,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612484424903436121, guid: d8fe1549909e895408790384310b8bd6,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2900072460220940818, guid: d8fe1549909e895408790384310b8bd6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2265,6 +2290,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8fe1549909e895408790384310b8bd6, type: 3}
+--- !u!114 &2900072461312765108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2612484424903436121, guid: d8fe1549909e895408790384310b8bd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2900072461312765107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3661656676291981334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2682,5 +2719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStatus
       objectReference: {fileID: 0}
+    - target: {fileID: 8236284610046238719, guid: 84a0adc5cccfae44baa372cec94b3d03,
+        type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 2900072461312765108}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84a0adc5cccfae44baa372cec94b3d03, type: 3}
