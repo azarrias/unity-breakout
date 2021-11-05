@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class GameStatus : MonoBehaviour
 {
-    [Range(0.1f, 10f)]
-    [SerializeField] private float timeScale = 1f;
+    [Header("Config")]
+    [Range(0.1f, 10f)] [SerializeField] private float timeScale = 1f;
+    [SerializeField] int pointsPerBlockDestroyed = 10;
+
+    [Header("State")]
+    [SerializeField] private int currentScore = 0;
 
     void Start()
     {
         Time.timeScale = timeScale;
     }
 
-    void Update()
+    public void AddToScore()
     {
- 
+        currentScore += pointsPerBlockDestroyed;
     }
 }
