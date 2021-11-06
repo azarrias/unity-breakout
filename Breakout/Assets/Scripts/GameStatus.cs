@@ -24,4 +24,9 @@ public class GameStatus : PersistentSingleton<GameStatus>
         currentScore += pointsPerBlockDestroyed;
         scoreText.text = currentScore.ToString();
     }
+
+    public void ResetGame()
+    {
+        Destroy(gameObject);
+    }
 }
