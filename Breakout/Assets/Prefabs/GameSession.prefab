@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8236284610046238716}
   - component: {fileID: 8236284610046238719}
   m_Layer: 0
-  m_Name: GameStatus
+  m_Name: GameSession
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8236284610046238718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31173007328b6a0409e697a9e8e677a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 261a637b66b6c4d49bb76387e24bebff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeScale: 1
@@ -79,6 +79,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612484424903436121, guid: d8fe1549909e895408790384310b8bd6,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 516
       objectReference: {fileID: 0}
     - target: {fileID: 2900072460220940818, guid: d8fe1549909e895408790384310b8bd6,
         type: 3}

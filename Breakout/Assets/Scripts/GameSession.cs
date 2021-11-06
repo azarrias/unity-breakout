@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class GameStatus : PersistentSingleton<GameStatus>
+public class GameSession : PersistentSingleton<GameSession>
 {
     [Header("Config")]
     [Range(0.1f, 10f)] [SerializeField] private float timeScale = 1f;
