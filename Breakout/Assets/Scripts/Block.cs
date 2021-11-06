@@ -5,6 +5,8 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     [SerializeField] private AudioClip breakSound;
+    [SerializeField] private GameObject blockParticlesPrefab;
+
     private Level level;
 
     private void Start()
@@ -22,7 +24,14 @@ public class Block : MonoBehaviour
     {
         FindObjectOfType<GameSession>().AddToScore();
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
-        Destroy(gameObject);
         level.DecreaseNumberOfBreakableBlocks();
+        TriggerParticles();
+        Destroy(gameObject);
+    }
+
+    private void TriggerParticles()
+    {
+        GameObject particles = Instantiate(blockParticlesPrefab, transform.position, transform.rotation);
+        Destroy(particles, 1f);
     }
 }
