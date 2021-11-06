@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class GameStatus : MonoBehaviour
+public class GameStatus : PersistentSingleton<GameStatus>
 {
     [Header("Config")]
     [Range(0.1f, 10f)] [SerializeField] private float timeScale = 1f;
@@ -22,5 +22,6 @@ public class GameStatus : MonoBehaviour
     public void AddToScore()
     {
         currentScore += pointsPerBlockDestroyed;
+        scoreText.text = currentScore.ToString();
     }
 }
