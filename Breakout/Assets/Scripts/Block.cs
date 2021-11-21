@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,8 +7,12 @@ public class Block : MonoBehaviour
 {
     [SerializeField] private AudioClip breakSound;
     [SerializeField] private GameObject blockParticlesPrefab;
+    [SerializeField] private int maxHits;
+    [SerializeField] Sprite[] hitSprites;
 
     private Level level;
+
+    [SerializeField] private int timesHit;  // only serialized for debugging
 
     private void Start()
     {
@@ -25,10 +30,26 @@ public class Block : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (CompareTag("Breakable"))
+        if (!CompareTag("Breakable"))
+        {
+            return;
+        }
+
+        timesHit++;
+        if (timesHit >= maxHits)
         {
             DestroyBlock();
         }
+        else
+        {
+            ShowNextHitSprite();
+        }
+    }
+
+    private void ShowNextHitSprite()
+    {
+        var spriteIndex = timesHit - 1;
+        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
     }
 
     private void DestroyBlock()
